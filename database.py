@@ -3,7 +3,7 @@ from time import time
 from typing import Dict, Any
 
 # Database file name
-DB_NAME = "logs.db"
+DB_NAME = "logs/logs.db"
 
 def init_db():
     """Initialize the database and create the logs table if it doesn't exist."""
