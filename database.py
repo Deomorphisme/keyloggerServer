@@ -1,9 +1,14 @@
+import os
 import sqlite3
 from time import time
 from typing import Dict, Any
 
 # Database file name
 DB_NAME = "logs/logs.db"
+
+def ensure_logs_dir():
+    """Ensure the 'logs' directory exists; create if missing."""
+    os.makedirs(os.path.dirname(DB_NAME), exist_ok=True)
 
 def init_db():
     """Initialize the database and create the logs table if it doesn't exist."""
