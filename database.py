@@ -12,6 +12,7 @@ def ensure_logs_dir():
 
 def init_db():
     """Initialize the database and create the logs table if it doesn't exist."""
+    ensure_logs_dir()
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute('''
